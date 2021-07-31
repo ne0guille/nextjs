@@ -19,7 +19,7 @@ const SSRPage = () => (
 
 export async function getServerSideProps() {
   const apolloClient = initializeApollo()
-
+  console.log(ALL_POSTS_QUERY)
   await apolloClient.query({
     query: ALL_POSTS_QUERY,
     variables: allPostsQueryVars,

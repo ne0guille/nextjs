@@ -1,32 +1,9 @@
 import { gql, useMutation } from '@apollo/client'
 
-const UPDATE_POST_MUTATION = gql`
-  mutation votePost($id: String!) {
-    votePost(id: $id) {
-      id
-      votes
-      __typename
-    }
-  }
-`
-
 export default function PostUpvoter({ votes, id }) {
-  const [updatePost] = useMutation(UPDATE_POST_MUTATION)
 
   const upvotePost = () => {
-    updatePost({
-      variables: {
-        id,
-      },
-      optimisticResponse: {
-        __typename: 'Mutation',
-        votePost: {
-          __typename: 'Post',
-          id,
-          votes: votes + 1,
-        },
-      },
-    })
+
   }
 
   return (

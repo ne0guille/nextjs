@@ -3,10 +3,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "node_modules/next/dist/bin/next start -p $PORT"
+    "start": "next start"
   },
   "dependencies": {
-    "@apollo/client": "3.1.1",
+    "@apollo/client": "3.4.1",
     "deepmerge": "4.2.2",
     "graphql": "15.3.0",
     "lodash": "4.17.20",
